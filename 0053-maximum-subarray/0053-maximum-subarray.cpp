@@ -6,11 +6,8 @@ public:
         for (int i = 1; i < nums.size(); ++i) {
             corner = max(corner, nums[i]);
             if (nums[i] * nums[i - 1] < 0 || (nums[i - 1] == 0 && nums[i] < 0) || (nums[i] == 0 && nums[i - 1] < 0)) {
-                isCorner = false;
-                //Push back the current tmp
-                cout << tmp << " ";
-
-                //Perform calculate
+                if (isCorner) isCorner = false;
+                //Perform calculation
                 if (tmp > 0) {
                     tmp_sum += tmp;
                 }
