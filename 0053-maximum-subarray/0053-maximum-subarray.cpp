@@ -5,7 +5,7 @@ public:
         bool isCorner = true;
         for (int i = 1; i < nums.size(); ++i) {
             corner = max(corner, nums[i]);
-            if (nums[i] * nums[i - 1] < 0 | (nums[i] * nums[i - 1] == 0 && nums[i] + nums[i - 1] < 0)) {
+            if (nums[i] * nums[i - 1] <= 0) {
                 if (isCorner) isCorner = false;
                 //Perform calculation
                 ans = max(tmp_sum, ans);
