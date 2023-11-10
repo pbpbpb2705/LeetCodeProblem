@@ -9,7 +9,7 @@ public:
                 if (isCorner) isCorner = false;
                 //Perform calculation
                 ans = max(tmp_sum, ans);
-                tmp_sum = (tmp_sum + tmp > 0 | tmp > 0) ? tmp_sum + tmp : 0;
+                tmp_sum = (tmp_sum + tmp > 0 || tmp > 0) ? tmp_sum + tmp : 0;
                 //Update tmp for next
                 tmp = nums[i];
             }
