@@ -8,13 +8,8 @@ public:
             if (nums[i] * nums[i - 1] < 0 || (nums[i] * nums[i - 1] == 0 && nums[i] + nums[i - 1] < 0)) {
                 if (isCorner) isCorner = false;
                 //Perform calculation
-                if (tmp > 0) {
-                    tmp_sum += tmp;
-                }
-                else {
-                    ans = max(tmp_sum, ans);
-                    tmp_sum = (tmp_sum + tmp > 0) ? tmp_sum + tmp : 0;
-                }
+                ans = max(tmp_sum, ans);
+                tmp_sum = (tmp_sum + tmp > 0 | tmp > 0) ? tmp_sum + tmp : 0;
                 //Update tmp for next
                 tmp = nums[i];
             }
