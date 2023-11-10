@@ -20,7 +20,6 @@ public:
                         tmp_sum += tmp;
                     }
                 }
-                cout << tmp_sum << endl;
                 //Update tmp for next
                 tmp = nums[i];
             }
