@@ -13,12 +13,7 @@ public:
                 }
                 else {
                     ans = max(tmp_sum, ans);
-                    if (tmp_sum + tmp < 0) {
-                        tmp_sum = 0;
-                    }
-                    else {
-                        tmp_sum += tmp;
-                    }
+                    tmp_sum = (tmp_sum + tmp > 0) ? tmp_sum + tmp : 0;
                 }
                 //Update tmp for next
                 tmp = nums[i];
